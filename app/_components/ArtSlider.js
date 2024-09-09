@@ -78,8 +78,6 @@ const ArtSlider = ({ artworks }) => {
             key={item.id}
             className="  border-none shadow-none hover:shadow-none focus-visible:outline-none"
           >
-            {/* // {" "}
-        // Remove borders/shadows */}
             {/* px-8 py-6 */}
             <Link
               href={`/gallery/${item.genre}`}
