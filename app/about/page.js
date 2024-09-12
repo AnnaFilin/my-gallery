@@ -1,7 +1,7 @@
 import Image from "next/image";
-import portret1 from "/public/images/portret1.jpg";
-import portret2 from "/public/images/portret2.jpg";
-import portret3 from "/public/images/portret3.jpg";
+import portret1 from "@/public/images/portret1.jpg";
+import portret2 from "@/public/images/portret2.jpg";
+import portret3 from "@/public/images/portret3.jpg";
 
 export const metadata = {
   title: "About",
