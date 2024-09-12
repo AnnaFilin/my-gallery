@@ -1,4 +1,4 @@
-import { supabase } from "../supabase";
+import { supabase } from "@/app/supabase";
 import ArtSlider from "../_components/ArtSlider";
 
 async function getData() {
