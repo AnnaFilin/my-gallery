@@ -1,4 +1,3 @@
-import Logo from "@/app/_components/Logo";
 import Navigation from "@/app/_components/Navigation";
 
 import { Josefin_Sans } from "next/font/google";
@@ -9,7 +8,6 @@ const josefin = Josefin_Sans({
 });
 
 import "@/app/globals.css";
-// import Header from "./_components/Header";
 
 export const metadata = {
   title: {
@@ -22,17 +20,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* antialiased bg-primary-950 text-primary-100 */}
       <body
         className={`${josefin.className} antialiased  bg-primary-950 text-primary-100 min-h-screen flex flex-col relative`}
       >
-        <header className="flex items-center justify-around">
-          <Logo />
+        <header className="mb-14 ">
           <Navigation />
         </header>
 
-        <div className="flex-1 px-8 py-12 grid">
-          <main className="max-w-7xl mx-auto w-full">{children}</main>
+        <div className="flex-1 px-1 sm:px-8 py-12 ">
+          <main className=" w-full sm:max-w-7xl mx-auto sm:w-full">
+            {children}
+          </main>
         </div>
       </body>
     </html>

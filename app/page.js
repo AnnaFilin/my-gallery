@@ -5,14 +5,14 @@ import bg from "@/public/bg.jpg";
 
 const Page = () => {
   return (
-    <div className="mt-24 relative">
+    <div className="mt-24 ">
       <Image
         src={bg}
         fill
         placeholder="blur"
         quality={80}
         alt="image"
-        className="object-cover"
+        // className="object-contain"
       />
 
       <div className="relative z-10 text-center">
@@ -21,7 +21,7 @@ const Page = () => {
         </h1>
         <Link
           href="/gallery"
-          className="bg-accent-500 px-8 py-6 text-primary-800 text-5xl font-semibold hover:bg-accent-600 transition-all focus:outline-none focus-visible:outline-none"
+          className=" px-8 py-6 text-primary-800 text-5xl font-semibold "
         >
           Gallery
         </Link>

@@ -68,10 +68,10 @@ module.exports = {
       },
     },
   },
-  corePlugins: {
-    ringWidth: false, // Отключение 'ring' для фокуса
-    outline: false, // Отключение обводки (outline)
-    border: false,
-  },
+  // corePlugins: {
+  //   ringWidth: false, // Отключение 'ring' для фокуса
+  //   outline: false, // Отключение обводки (outline)
+  //   border: false,
+  // },
   plugins: [],
 };

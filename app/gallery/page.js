@@ -1,30 +1,26 @@
-// import { useEffect, useState } from "react";
 import { supabase } from "../supabase";
 import ArtSlider from "../_components/ArtSlider";
 
-const Page = async () => {
-  // useEffect(() => {
-  // const artworks = async () => {
+async function getData() {
   const { data, error } = await supabase.from("artworks").select("*");
+  if (error) {
+    throw new Error("Failed to fetch data");
+  }
+  return data;
+}
 
-  // if (error) {
-  //   console.error("Error fetching artworks:", error);
-  // } else {
-  //   setArtworks(data);
-  // }
-  // };
-
-  //   fetchArtworks();
-  // }, []);
-  // console.log(artworks);
-
+const Page = async () => {
+  const data = await getData();
+  console.log("data ", data);
   return (
-    <div>
-      <h1 className="text-4xl text-accent-400 font-medium">
-        Wellcome To My Gallery
-      </h1>
-      {data.length > 0 && <ArtSlider artworks={data} />}
-    </div>
+    <>
+      <div>
+        <h1 className="text-4xl text-primary-100 font-medium">
+          Wellcome To My Gallery
+        </h1>
+      </div>
+      <ArtSlider artworks={data} />
+    </>
   );
 };
 export default Page;

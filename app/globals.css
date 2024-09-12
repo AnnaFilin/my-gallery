@@ -34,8 +34,8 @@
 
 .rdp {
   --rdp-cell-size: 32px !important;
-  --rdp-accent-color: theme("colors.accent.500") !important;
-  --rdp-background-color: theme("colors.accent.600") !important;
+  /* --rdp-accent-color: theme("colors.accent.500") !important; */
+  /* --rdp-background-color: theme("colors.accent.600") !important; */
   margin: 0 !important;
 }
 /* :root {
@@ -51,12 +51,12 @@
     --background-end-rgb: 0, 0, 0;
   }
 } */
-/* button,
+button,
 a,
 div {
   transition: all 0.3s ease;
-} */
-button:focus,
+}
+/* button:focus,
 a:focus,
 input:focus,
 div:focus,
@@ -73,18 +73,13 @@ header:focus-visible,
 main:focus-visible,
 nav:focus-visible {
   outline: none !important;
-}
+} */
 /* 
 body {
   color: #fcfcfc;
   background: #180920;
 } */
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
 .masonry-grid {
   display: flex;
   margin-left: -10px; /* Optional for better alignment */
@@ -100,7 +95,7 @@ body {
   margin-bottom: 15px; /* Space between items */
 }
 
-* {
+/* * {
   outline-offset: 0px !important;
   border: none !important;
   outline: none !important;
@@ -117,4 +112,16 @@ body {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
+} */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  overflow-x: hidden; /* Prevent horizontal scroll overflow */
 }

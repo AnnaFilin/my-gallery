@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import "lightgallery/css/lightgallery.css"; // Core LightGallery styles
 import "lightgallery/css/lg-zoom.css"; // Zoom plugin styles
@@ -27,14 +27,8 @@ const GenrePage = () => {
     fetchArtworks();
   }, []);
 
-  // useEffect(() => {
-  //   if (lightboxRef.current) {
-  //     lightboxRef.current.refresh();
-  //   }
-  // }, [images]);
-
   const masonryBreakpoints = {
-    default: 4, // 3 columns by default
+    default: 4,
     1100: 3, // 2 columns at screen width <= 1100px
     700: 2, // 1 column at screen width <= 700px
     600: 1,
@@ -50,23 +44,27 @@ const GenrePage = () => {
         columnClassName="masonry-grid-column"
       >
         {artworks.map((image) => (
-          <Link
-            key={image.id}
-            href={`/painting/${image.id}`}
-            className="    text-2xl"
-          >
-            <Image
-              src={image.image_urls.test}
-              alt={image.title}
-              width={300}
-              priority
-              height={400}
-              className="rounded-lg hover:opacity-75 cursor-pointer"
-            />
-            <p className="text-center ">{image.title}</p>
-
-            {image.title}
-          </Link>
+          <div key={image.id}>
+            <Link
+              key={image.id}
+              href={`/painting/${image.id}`}
+              className="   text-2xl"
+            >
+              <Image
+                src={image.image_urls.test || image.image_urls.large}
+                alt={image.title}
+                priority
+                layout="responsive"
+                width={500}
+                height={500}
+                sizes="(min-width: 60em) 24vw,
+                (min-width: 28em) 45vw,
+                100vw"
+                className="rounded-lg hover:opacity-75 cursor-pointer"
+              />
+              <p className="text-center ">{image.title}</p>
+            </Link>
+          </div>
         ))}
       </Masonry>
 

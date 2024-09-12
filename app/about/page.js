@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import portret1 from "@/public/images/portret1.jpg";
 import portret2 from "@/public/images/portret2.jpg";
 import portret3 from "@/public/images/portret3.jpg";
@@ -92,10 +92,10 @@ export default function Page() {
 
           <div>
             <a
-              href="/cabins"
-              className="inline-block mt-4 bg-accent-500 px-8 py-5 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
+              href="/gallery"
+              className="inline-block mt-4 px-8 py-5 text-primary-800 text-lg font-semibold "
             >
-              Explore our luxury cabins
+              Explore my artworks.
             </a>
           </div>
         </div>
