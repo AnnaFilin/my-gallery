@@ -10,18 +10,22 @@ const Navigation = () => {
     {
       id: 1,
       link: "home",
+      path: "/",
     },
     {
       id: 2,
       link: "gallery",
+      path: "/gallery",
     },
     {
       id: 3,
       link: "about",
+      path: "/about",
     },
     {
       id: 4,
       link: "contact",
+      path: "/contact",
     },
   ];
 
