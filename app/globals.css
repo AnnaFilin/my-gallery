@@ -38,47 +38,12 @@
   /* --rdp-background-color: theme("colors.accent.600") !important; */
   margin: 0 !important;
 }
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
 button,
 a,
 div {
   transition: all 0.3s ease;
 }
-/* button:focus,
-a:focus,
-input:focus,
-div:focus,
-header:focus,
-nav:focus main:focus {
-  outline: none !important;
-}
-
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-div:focus-visible,
-header:focus-visible,
-main:focus-visible,
-nav:focus-visible {
-  outline: none !important;
-} */
-/* 
-body {
-  color: #fcfcfc;
-  background: #180920;
-} */
 
 .masonry-grid {
   display: flex;
@@ -95,24 +60,6 @@ body {
   margin-bottom: 15px; /* Space between items */
 }
 
-/* * {
-  outline-offset: 0px !important;
-  border: none !important;
-  outline: none !important;
-}
-
-*:focus {
-  outline-offset: 0px !important;
-  border: none !important;
-  outline: none !important;
-}
-
-*:focus-visible {
-  outline-offset: 0px !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-} */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
