@@ -29,27 +29,24 @@ const GenrePage = () => {
 
   const masonryBreakpoints = {
     default: 4,
-    1100: 3, // 2 columns at screen width <= 1100px
-    700: 2, // 1 column at screen width <= 700px
-    600: 1,
+    1100: 3, // 3 columns at screen width <= 1100px
+    700: 2, // 2 columns at screen width <= 700px
+    600: 1, // 1 column at screen width <= 600px
   };
 
   return (
-    <div className="container mx-auto ">
-      <h1 className="text-3xl font-bold text-center ">{}</h1>
+    <div className="container mx-auto">
+      <h1 className="text-3xl font-bold text-center mb-6">{}</h1>
 
       <Masonry
         breakpointCols={masonryBreakpoints}
         className="masonry-grid"
-        columnClassName="masonry-grid-column"
+        columnClassName="masonry-grid-column gap-1 "
       >
         {artworks.map((image) => (
-          <div key={image.id}>
-            <Link
-              key={image.id}
-              href={`/painting/${image.id}`}
-              className="   text-2xl"
-            >
+          <div className="bg-white border my-2 border-gray-200 rounded-lg p-1 shadow-md overflow-hidden">
+            <Link href={`/painting/${image.id}`}>
+              {/* Image with hover effect */}
               <Image
                 src={image.image_urls.test || image.image_urls.large}
                 alt={image.title}
@@ -58,22 +55,14 @@ const GenrePage = () => {
                 width={500}
                 height={500}
                 sizes="(min-width: 60em) 24vw,
-                (min-width: 28em) 45vw,
-                100vw"
-                className="rounded-lg hover:opacity-75 cursor-pointer"
+                     (min-width: 28em) 45vw,
+                     100vw"
+                className="hover:opacity-90 cursor-pointer"
               />
-              <p className="text-center ">{image.title}</p>
             </Link>
           </div>
         ))}
       </Masonry>
-
-      {/* LightGallery for full-screen image viewing */}
-      {/* <LightGallery
-        plugins={[lgThumbnail, lgZoom]}
-        speed={500}
-        ref={lightboxRef}
-      /> */}
     </div>
   );
 };
