@@ -44,7 +44,10 @@ const GenrePage = () => {
         columnClassName="masonry-grid-column gap-1 "
       >
         {artworks.map((image) => (
-          <div className="bg-white border my-2 border-gray-200 rounded-lg p-1 shadow-md overflow-hidden">
+          <div
+            key={image.id}
+            className="bg-white border my-2 border-gray-200 rounded-lg p-1 shadow-md overflow-hidden"
+          >
             <Link href={`/painting/${image.id}`}>
               {/* Image with hover effect */}
               <Image
