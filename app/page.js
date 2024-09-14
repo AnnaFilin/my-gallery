@@ -5,8 +5,16 @@ import bg from "@/public/bg.jpg";
 
 const Page = () => {
   return (
-    <div className="mt-24 ">
-      <Image src={bg} fill placeholder="blur" quality={80} alt="image" />
+    <div className=" flex flex-nowrap">
+      <Image
+        src={bg}
+        fill
+        // placeholder="blur"
+        quality={80}
+        alt="image"
+        className="object-cover w-full h-full "
+        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      />
 
       <div className="relative z-10 text-center">
         <h1 className="text-8xl text-primary-50 mb-10 tracking-tight font-normal">

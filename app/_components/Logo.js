@@ -5,9 +5,8 @@ import logo from "@/public/LogoFilin.png";
 function Logo() {
   return (
     <Link href="/" className="flex items-center gap-4 z-10">
-      <div className="relative w-[200px] h-[200px]">
+      <div className="relative w-[250px] h-[100px]">
         {" "}
-        {/* Adjust width and height */}
         <Image
           src={logo}
           alt="Filin Art logo"

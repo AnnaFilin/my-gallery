@@ -4,6 +4,7 @@ import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SlideImage from "./SlideImage";
 
 const NextArrow = (props) => {
   const { onClick } = props;
@@ -69,26 +70,7 @@ const ArtSlider = ({ artworks }) => {
     <div className="w-full max-w-screen-lg mx-auto relative">
       <Slider {...settings}>
         {artworks.map((item) => (
-          <div
-            key={item.id}
-            className="relative w-full h-[70vh] sm:h-[50vh] overflow-hidden"
-          >
-            <Link
-              href={`/gallery/${item.genre}`}
-              className="block w-full h-full"
-            >
-              <div className="relative w-full h-full">
-                <Image
-                  src={item.image_urls.large || item.image_urls.test}
-                  alt={item.genre}
-                  fill
-                  className="object-contain w-full h-full"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  quality={80}
-                />
-              </div>
-            </Link>
-          </div>
+          <SlideImage item={item} key={item.id} />
         ))}
       </Slider>
     </div>
