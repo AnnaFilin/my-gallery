@@ -13,14 +13,14 @@ const Page = async () => {
   const data = await getData();
   console.log("data ", data);
   return (
-    <>
+    <div>
       <div>
-        <h1 className="text-4xl text-primary-100 font-medium">
-          Wellcome To My Gallery
+        <h1 className="text-4xl text-primary-100 text-center mb-2font-medium">
+          Gallery
         </h1>
       </div>
       <ArtSlider artworks={data} />
-    </>
+    </div>
   );
 };
 export default Page;

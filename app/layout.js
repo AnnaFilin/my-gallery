@@ -23,11 +23,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${josefin.className} antialiased  bg-primary-950 text-primary-100 min-h-screen flex flex-col relative`}
       >
-        <header className="mb-14 fixed h-min z-30">
+        <header className="mb-14 fixed top-0 w-full z-50">
           <Navigation />
         </header>
 
-        <div className="flex-1 px-1 sm:px-8 py-12 z-20">
+        <div className="flex-1 px-1 sm:px-8 py-12 pt-24 z-20">
           <main className=" w-full sm:max-w-7xl mx-auto sm:w-full">
             {children}
           </main>
