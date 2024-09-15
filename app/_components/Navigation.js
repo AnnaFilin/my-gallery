@@ -36,12 +36,14 @@ const Navigation = () => {
       </div>
 
       <ul className="hidden md:flex">
-        {links.map(({ id, link }) => (
+        {links.map(({ id, link, path }) => (
           <li
             key={id}
             className="nav-links px-4 cursor-pointer capitalize font-medium text-primary-100 hover:scale-105 hover:text-primary-100 duration-200 link-underline"
           >
-            <Link href={link}>{link}</Link>
+            <Link onClick={() => setNav(!nav)} href={path}>
+              {link}
+            </Link>
           </li>
         ))}
       </ul>
@@ -55,12 +57,12 @@ const Navigation = () => {
 
       {nav && (
         <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-primary-900 text-primary-100">
-          {links.map(({ id, link }) => (
+          {links.map(({ id, link, path }) => (
             <li
               key={id}
               className="px-4 cursor-pointer capitalize py-6 text-4xl"
             >
-              <Link onClick={() => setNav(!nav)} href={link}>
+              <Link onClick={() => setNav(!nav)} href={path}>
                 {link}
               </Link>
             </li>
