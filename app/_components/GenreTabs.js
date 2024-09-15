@@ -28,8 +28,8 @@ const GenreTabs = ({ active }) => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-30 px-0 text-primary-100 bg-primary-900 fixed  z-50">
-      <ul className="flex flex-row sm:flex-col">
+    <div className="flex justify-between items-center w-full mb-5-20 px-0 text-primary-100 bg-primary-900 fixed  z-50">
+      <ul className="flex flex-row ">
         {links.map(({ id, link }) => (
           <li
             key={id}
