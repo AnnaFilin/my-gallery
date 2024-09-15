@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Page({ params }) {
-  const router = useRouter();
+  // const router = useRouter();
   const [paintingData, setPaintingData] = useState(null);
   const [error, setError] = useState(null);
 

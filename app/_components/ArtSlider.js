@@ -38,7 +38,7 @@ const ArtSlider = ({ artworks }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 44000,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [

@@ -10,12 +10,15 @@ import Masonry from "react-masonry-css"; // Import Masonry for layout
 import Link from "next/link";
 import { supabase } from "@/app/supabase";
 
-const GenrePage = () => {
+const GenrePage = ({ params }) => {
   const [artworks, setArtworks] = useState([]);
 
   useEffect(() => {
     const fetchArtworks = async () => {
-      const { data, error } = await supabase.from("artworks").select("*");
+      const { data, error } = await supabase
+        .from("artworks")
+        .select("*")
+        .eq("genre", params.genre);
 
       if (error) {
         console.error("Error fetching artworks:", error);
@@ -36,7 +39,9 @@ const GenrePage = () => {
 
   return (
     <div className="container mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-6">{}</h1>
+      <h1 className="text-3xl font-bold text-center capitalize mb-6">
+        {params.genre}
+      </h1>
 
       <Masonry
         breakpointCols={masonryBreakpoints}
@@ -62,6 +67,9 @@ const GenrePage = () => {
                      100vw"
                 className="hover:opacity-90 cursor-pointer"
               />
+              <p className="text-primary-700 text-md font-semibold p-1">
+                {image.title}
+              </p>
             </Link>
           </div>
         ))}
