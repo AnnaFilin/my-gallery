@@ -20,7 +20,6 @@ const Painting = ({ painting }) => {
       </div>
 
       <div className={`relative w-full ${isLandscape ? "h-auto" : "h-auto"}`}>
-        {/* Frame effect with subtle border and shadow */}
         <div className="border-4 border-grey-200 p-2 rounded-lg shadow-lg">
           <Image
             src={painting.image_urls.large || painting.image_urls.test}

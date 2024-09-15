@@ -9,6 +9,7 @@ import Masonry from "react-masonry-css"; // Import Masonry for layout
 
 import Link from "next/link";
 import { supabase } from "@/app/supabase";
+import GenreTabs from "@/app/_components/GenreTabs";
 
 const GenrePage = ({ params }) => {
   const [artworks, setArtworks] = useState([]);
@@ -39,10 +40,11 @@ const GenrePage = ({ params }) => {
 
   return (
     <div className="container mx-auto">
-      <h1 className="text-3xl font-bold text-center capitalize mb-6">
+      {/* <h1 className="text-3xl font-bold text-center capitalize mb-6">
         {params.genre}
-      </h1>
+      </h1> */}
 
+      <GenreTabs active={params.genre} />
       <Masonry
         breakpointCols={masonryBreakpoints}
         className="masonry-grid"
