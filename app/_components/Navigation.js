@@ -30,7 +30,7 @@ const Navigation = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-0 text-primary-100 bg-primary-900 fixed nav z-50">
+    <div className="flex justify-between items-center w-full  px-0 text-primary-100 bg-primary-900 fixed nav z-50">
       <div>
         <Logo />
       </div>

@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${josefin.className} antialiased  bg-primary-900 text-primary-100 min-h-screen flex flex-col relative`}
       >
-        <header className="mb-14 fixed top-0 w-full z-50">
+        <header className=" fixed top-0 w-full z-50">
           <Navigation />
         </header>
 
