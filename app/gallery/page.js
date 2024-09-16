@@ -14,11 +14,11 @@ const Page = async () => {
   console.log("data ", data);
   return (
     <div>
-      <div>
+      {/* <div>
         <h1 className="text-4xl text-primary-100 text-center mb-2 font-medium">
           Gallery
         </h1>
-      </div>
+      </div> */}
       <ArtSlider artworks={data} />
     </div>
   );

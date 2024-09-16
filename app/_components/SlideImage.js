@@ -9,7 +9,7 @@ const SlideImage = ({ item }) => {
       className="relative w-full h-[70vh] sm:h-[50vh] overflow-hidden"
     >
       <Link href={`/gallery/${item.genre}`} className="block w-full h-full">
-        <div className="relative w-full h-full border border-2 border-primary-300   rounded-md">
+        <div className="relative w-full h-full  ">
           <Image
             src={item.image_urls.large || item.image_urls.test}
             alt={item.genre}
